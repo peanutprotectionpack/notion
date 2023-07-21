@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Peanut's Age</title>
+    <style>
+        body {
+            font-family: baskerville, serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body onload="calculateWeeks()">
+    <p id="result"></p>
+
+    <script>
+        // Set the birthday as a constant (replace with your actual birthday)
+        const birthday = new Date("2023-06-14");
+
+        function calculateWeeks() {
+            const currentDate = new Date();
+
+            // Calculate the difference in milliseconds
+            const differenceInMilliseconds = currentDate - birthday;
+
+            // Calculate the number of weeks
+            const weeks = Math.floor(differenceInMilliseconds / (1000 * 60 * 60 * 24 * 7));
+
+            // Display the result
+            const resultElement = document.getElementById("result");
+            resultElement.innerText = `Peanut is ${weeks} weeks old!`;
+        }
+    </script>
+</body>
+</html>
